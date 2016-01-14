@@ -6,7 +6,7 @@ class Fibonacci {
    int sum = 0;
    boolean run = true;
    
-   public void getEvens(){
+   public int getEvens(){
    while (fibo < 4000000) {
      fibo = current + prev;
      prev = current;
@@ -17,7 +17,9 @@ class Fibonacci {
      System.out.println(current + " " + prev );
      }
      System.out.println(sum);
+     return 0;
     }
+   
   }
      
      
