@@ -12,7 +12,7 @@ class Fibonacci {
      if (fibo % 2 == 0) {
        sum += fibo;
      }
-     System.out.println(current + " " + prev );
+     // System.out.println(current + " " + prev );
      }
      System.out.println(sum);
      return 0;
