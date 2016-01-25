@@ -1,25 +1,30 @@
 public class ThridEulerProblem {
-  long testNum = 600851475143l; 
-  int largestFactor = 0; 
-  long loopMax = 17425170l; 
-  boolean isPrime;
+    long largestFactor = 0; 
+    long loopMax = 17425170L;
+    long numm = 600851475143L; 
+    boolean isPrime;
   
-  public int getLargest() {
-    for (int i = 3; i * i <= loopMax; i++) { 
-      boolean isPrime = true;             
-      for (int x = 2; x < i; x++) { 
-       if (i % x == 0) { 
-          isPrime = false; 
-          break; 
-       } 
-    }                         
-      if (isPrime && testNum % i == 0) { 
-        System.out.println("prime factor: " + i); 
-        largestFactor = i; 
-        loopMax = (testNum / i) + 1; 
-      } 
+    public long getLargest(long numm) {
+        for (long i = 2; i * i <= loopMax; i++) {
+            if (numm % i == 0) {  
+                boolean isPrime = true;             
+                for (int j = 2; j < i; j++) { 
+                     if (i % j == 0) { 
+                     isPrime = false; 
+                     break; 
+                     }    
+                }
+                isTrue(isPrime, i);
+              }
+         }
+         return numm;
+    }
+
+    public void isTrue(boolean isPrime, long i) {
+        if (isPrime) {
+            largestFactor = i; 
+            System.out.println("prime factor: " + i); 
+            loopMax = (numm / i) + 1;
+        }
    }
-   System.out.println("result is " + largestFactor);
-   return 0;
-  }
 } 
